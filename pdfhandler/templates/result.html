@@ -1,0 +1,60 @@
+<!-- pdfhandler/templates/result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        h2, h3 {
+            color: #333;
+        }
+        #extracted-text {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow-y: auto;
+        }
+        #ai-percentage {
+            color: #007bff;
+        }
+        .go-back-btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .go-back-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>AI Text Detection Result</h2>
+        <h3>Extracted Text:</h3>
+        <div id="extracted-text">{{ extracted_text }}</div>
+        <h3>AI Percentage: <span id="ai-percentage">{{ ai_percentage }}</span></h3>
+        <button class="go-back-btn" onclick="window.location.href = '{% url 'upload_file' %}';">Go Back</button>
+    </div>
+</body>
+</html>
