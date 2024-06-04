@@ -1,1 +1,1 @@
-Student assignment grading and scoring system using BERT Transgormer and Hugging Face Models 
+CHECK THE AMOUNT OF PERCENTAGE OF AI WRITTEN AND COPIED TEXT PRESENT IN THE UPLOADED PDF FILES
